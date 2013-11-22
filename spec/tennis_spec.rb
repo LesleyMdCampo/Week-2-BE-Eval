@@ -103,9 +103,11 @@ describe Tennis::Player do
 
     context 'when a player scores following duece'do
       it 'returns Advantage' do
-        # player.points = 
+        player.points = 3
+        player.opponent.points = 3
+        player.points = 4
         
-        # expect(game.player.points).to eq()
+        expect(player.score).to eq('advantage')
       end
     end
 
