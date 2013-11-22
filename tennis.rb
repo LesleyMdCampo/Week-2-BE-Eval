@@ -18,6 +18,7 @@ module Tennis
     def wins_ball(winner)
       # TODO: Think it's gross to pass an integer instead of a player object?
       # Then reimplement this method!
+      winner.points += 1
     end
   end
 
@@ -34,12 +35,6 @@ module Tennis
     def record_won_ball!
       @points += 1
     end
-
-    # Increments the points of the winning player.
-    def wins_ball
-      @player1  += 1
-    end
-
 
     # Returns the String score for the player.
     def score
