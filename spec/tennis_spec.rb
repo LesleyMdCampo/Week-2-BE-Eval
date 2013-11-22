@@ -111,6 +111,12 @@ describe Tennis::Player do
       end
     end
 
+    context 'when a player wins a game' do
+      it 'increases player game count by' do
+
+        
+      end
+    end
     
   end
 end
