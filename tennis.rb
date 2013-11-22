@@ -35,6 +35,12 @@ module Tennis
       @points += 1
     end
 
+    # Increments the points of the winning player.
+    def wins_ball
+      @player1  += 1
+    end
+
+
     # Returns the String score for the player.
     def score
       return 'love' if @points == 0

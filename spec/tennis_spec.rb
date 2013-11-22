@@ -14,8 +14,8 @@ describe Tennis::Game do
     end
 
     it 'sets the opponent for each player' do
-      expect(game.player1.opponent).to eq(player2)
-      expect(game.player2.opponent).to eq(player1)
+      expect(game.player1.opponent).to eq(game.player2)
+      expect(game.player2.opponent).to eq(game.player1)
     end
   end
 
