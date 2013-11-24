@@ -113,8 +113,10 @@ describe Tennis::Player do
 
     context 'when a player wins a game' do
       it 'increases player game count by' do
+        player.points = 4
+        player.opponent.points = 2
 
-        
+        expect(player.scoreTotal).to eq("#{player} wins game!")
       end
     end
     
