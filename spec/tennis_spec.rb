@@ -81,15 +81,15 @@ describe Tennis::Player do
       end
     end
 
-    context 'when a player gets to 4 points and opponent has no more than 2 points' do
-      it 'returns win!' do
-        player.points = 3
-        player.opponent.points = 2
-        player.points = 4
+    # context 'when a player gets to 4 points and opponent has no more than 2 points' do
+    #   it 'returns win!' do
+    #     player.points = 3
+    #     player.opponent.points = 2
+    #     player.points = 4
 
-        expect(player.score).to eq('win!')
-      end
-    end
+    #     expect(player.score).to eq('win!')
+    #   end
+    # end
 
     context 'when both players have 3 points' do
       it 'returns Duece' do
@@ -110,15 +110,18 @@ describe Tennis::Player do
         expect(player.score).to eq('advantage')
       end
     end
+  end
 
+  describe '#win_game' do
     context 'when a player wins a game' do
       it 'increases player game count by' do
         player.points = 4
         player.opponent.points = 2
+        player.score
 
-        expect(player.scoreTotal).to eq("#{player} wins game!")
+        expect(player.games).to eq(1)
       end
     end
-    
   end
+
 end
